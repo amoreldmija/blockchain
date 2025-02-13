@@ -1,45 +1,25 @@
-# Blockchain Project
+# Projekti Blockchain
 
-A simple implementation of a blockchain in Python that demonstrates the core concepts behind blockchain technology, including block creation, hashing, a Proof of Work mechanism, and chain validation. This project is intended for educational purposes.
+Një zbatim i thjeshtë i blockchain-it në Python që demonstron konceptet bazë të teknologjisë blockchain, përfshirë krijimin e blloqeve, gjenerimin e hash-eve, mekanizmin Proof of Work dhe validimin e zinxhirit.
 
-## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Future Enhancements](#future-enhancements)
-- [License](#license)
-- [Contact](#contact)
+## Hyrje
+Ky projekt implementon një blockchain të thjeshtë në Python. Ai ju lejon të:
+- Krijoni një **Genesis Block** (blloku i parë në zinxhir)
+- Shtoni blloqe të reja me të dhëna dhe një hash të vlefshëm përmes një mekanizmi të thjeshtë **Proof of Work**
+- Validoni integritetin e të gjithë zinxhirit të blloqeve
 
-## Introduction
 
-This project implements a basic blockchain in Python. It allows you to:
-- Create a **Genesis Block** (the first block in the chain)
-- Add new blocks with data and a valid hash using a simple **Proof of Work** algorithm
-- Validate the integrity of the entire blockchain
+## Karakteristikat
+- **Krijimi i Blloqeve:** Secili bllok përfshin një indeks, kohëzgjatje (timestamp), të dhëna, hash-in e bllokut të mëparshëm, një nonce dhe hash-in e vet.
+- **Hash-i:** Përdor algoritmin SHA-256 për të krijuar hash-e unike për secilin bllok, duke siguruar integritetin e të dhënave.
+- **Proof of Work:** Implementon një algoritëm minimi që rrit `nonce` derisa të gjendet një hash me një numër të caktuar zero-ve në fillim.
+- **Validimi i Blockchain-it:** Përfshin funksionalitet për të verifikuar që secili bllok ka një hash të saktë dhe është i lidhur në mënyrë korrekte me bllokun e mëparshëm.
 
-The goal is to help you understand how blockchains work by exploring the underlying mechanisms in a straightforward, easy-to-read codebase.
+## Instalimi
 
-## Features
-
-- **Block Creation:** Each block includes an index, timestamp, data, the previous block's hash, a nonce, and its own hash.
-- **Hashing:** Uses SHA-256 to generate unique hashes for each block, ensuring data integrity.
-- **Proof of Work:** Implements a simple mining algorithm that adjusts the block's nonce until a hash with a predefined number of leading zeros is found.
-- **Blockchain Validation:** Includes functionality to check the consistency and security of the chain by verifying each block's hash and its connection to the previous block.
-
-## Installation
-
-### Prerequisites
-
-- **Python 3.6+** installed on your system.
-- Basic understanding of Python programming.
-
-### Steps
-
-1. **Clone the repository:**
-
+### Hapat
+1. **Klono depozitën nga GitHub:**
    ```bash
-   git clone https://github.com/yourusername/blockchain-project.git
+   git clone https://github.com/amoreldmija/blockchain.git
    cd blockchain-project
