@@ -37,7 +37,7 @@ class Block:
 class Blockchain:
     def __init__(self):
         self.chain = [self.create_genesis_block()]
-        self.difficulty = 3
+        self.difficulty = 10
 
     def create_genesis_block(self):
         """
